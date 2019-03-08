@@ -12,7 +12,7 @@ $("#downloadVideo").click(function() {
 
     $.ajax({
         type: 'POST',
-        url: "http://whateverorigin.org/get?url=" + encodeURIComponent(postUrl) + "&callback=?",
+        url: "https://whateverorigin.herokuapp.com/get?url=" + encodeURIComponent(postUrl) + "&callback=?",
         data: {
             'patientID': 1
         },
