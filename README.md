@@ -2,7 +2,7 @@
 
 Instagram Video Downloader is an online tool to download Instagram videos. With the help of Instagram video downloader, you can download  and save your favourite Instagram video (public) to your device (iPhone, iPad, Android, PC) in one click.
 
-Instagram Video Downloader or Insta-Video Downloader is developed as Instagram does not allow you to download videos directly but you like to. Insta-Video Downlaoder extracts mp4 video link from the Instagram post URL and downloads the video irrespective of the device (desktop or mobile or tabley).
+Instagram Video Downloader or Insta-Video Downloader is developed as Instagram does not allow you to download videos directly but you like to. Insta-Video Downlaoder extracts mp4 video link from the Instagram post URL and downloads the video irrespective of the device (desktop or mobile or tablet).
 
 ### Steps to Download Video
 
