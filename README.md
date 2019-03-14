@@ -17,3 +17,6 @@ Instagram Video Downloader or Insta-Video Downloader is developed as Instagram d
   [Click Here To Download Instagram Video / DEMO](https://goo.gl/FvihCT)
 
 >  Note: Some of the Instagram videos / accounts are private. Private Instagram videos are not accessible and can't be downloaded using this tool.
+
+
+This tool just uses the information that is freely accessible on Instagram and presents it is a different manner. Copyright and trademarks refer to their respective owners. Instagram and Instagram logo are trademarks of Facebook Inc.
