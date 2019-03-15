@@ -13,9 +13,6 @@ $("#downloadVideo").click(function() {
     $.ajax({
         type: 'POST',
         url: "https://whateverorigin.herokuapp.com/get?url=" + encodeURIComponent(postUrl) + "&callback=?",
-        data: {
-            'patientID': 1
-        },
         dataType: 'json',
         success: function(data) {
             var content = data.contents;
