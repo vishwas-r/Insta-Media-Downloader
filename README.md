@@ -1,4 +1,4 @@
-# [Insta-Media Downloader](https://goo.gl/FvihCT)
+# [Insta-Media Downloader](https://giturl.page.link/insta-media-downloader)
 
 Insta-Media Downloader is an online tool to download Instagram Images / Videos. With the help of Insta-Media downloader, you can download and save your favourite Instagram Image / Video (public) to your device (iPhone, iPad, Android, PC) in one click.
 
@@ -15,7 +15,7 @@ Instagram Media Downloader or Insta-Media Downloader is developed as Instagram d
   - Instagram image / video will be saved to your device.
   
 * * *
-  [Click Here To Download Instagram Image / Video DEMO](https://goo.gl/FvihCT)
+  [Click Here To Download Instagram Image / Video DEMO](https://giturl.page.link/insta-media-downloader)
 
 >  Note: Some of the Instagram image / video / accounts are private. Private Instagram images / videos are not accessible and can't be downloaded using this tool.
 
