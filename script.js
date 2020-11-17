@@ -5,11 +5,13 @@ function createMedia(data, type) {
 	var media = document.createElement(type);
 	media.id = "instagramMedia";
 	media.src = data.content;
-
+	media.setAttribute("class", "");
+	media.width = $(render).width();
+	
 	if (type === "video") {
 		media.controls = true;
-		media.autoplay = true
-	}
+		media.autoplay = true;		
+	} 
 	render.innerHTML = "";
 	var downloadMsg = document.createElement("p");
 	downloadMsg.setAttribute("class", "bg-success text-info");
