@@ -1,62 +1,49 @@
-$("#downloadVideo").click(function() {
-    var postUrl = $("#postUrl").val();
+$("#getMedia").click(getMedia);
+var render = document.querySelector("#media");
 
-    $.ajaxSetup({
-        scriptCharset: "utf-8", //maybe "ISO-8859-1"
-        contentType: "application/json; charset=utf-8"
-    });
-    if (postUrl == "")
-        $("#message").html("Please Enter the URL");
-    else
-        $("#message").html("Searching Video........");
+function createMedia(data, type) {
+	var media = document.createElement(type);
+	media.id = "instagramMedia";
+	media.src = data.content;
 
-    $.ajax({
-        type: 'POST',
-        url: "https://whateverorigin.herokuapp.com/get?url=" + encodeURIComponent(postUrl) + "&callback=?",
-        dataType: 'json',
-        success: function(data) {
-            var content = data.contents;
-            var startIndex = content.search('<meta property="og:video" content=');
-            var endIndex = content.indexOf('/>', startIndex);
-            var videoUrl = content.slice(startIndex, endIndex + 2)
-            var metaObject = $.parseHTML(videoUrl);
-            if (!!metaObject && metaObject.length > 0) {
-                //Video Found, Download
-                $("#message").html("Downloading...");
-                downloadFile(metaObject[0].content, "Video.mp4", "video/mp4");
-            } else {
-                if (data.status.http_code === 404) {
-                    //Post Not Found
-                    $("#message").html("Invalid URL / Not Found");
-                } else {
-                    //Video is private
-                    $("#message").html("Post is private");
-                }
-            }
-        },
-        error: function() {
-            $("#message").html("Invalid URL");
-        }
-    });
-});
+	if (type === "video") {
+		media.controls = true;
+		media.autoplay = true
+	}
+	render.innerHTML = "";
+	var downloadMsg = document.createElement("p");
+	downloadMsg.setAttribute("class", "bg-success text-info");
+	downloadMsg.innerText = "Right Click on the Media below to Save Option!";
 
+	render.appendChild(downloadMsg);
+	render.appendChild(media);
+}
 
-function downloadFile(data, filename, type) {
-    var file = new Blob([data], {
-        type: "video/mp4"
-    });
-    if (window.navigator.msSaveOrOpenBlob) // IE10+
-        window.navigator.msSaveOrOpenBlob(file, filename);
-    else { // Others
-        var a = document.createElement("a"),
-            url = URL.createObjectURL(file);
-        a.href = url;
-        a.download = filename;
-        document.body.appendChild(a);
-        a.click();
-        setTimeout(function() {
-            document.body.removeChild(a);
-            window.URL.revokeObjectURL(url);
-        }, 0);
-    }
+function getMedia() {
+	var url = $("#postUrl").val();
+	if (url) {
+		$.get(url, function (data) {
+			render.innerHTML = data;
+			var mediaWaitTimer = setTimeout(function () {
+				var video = document.querySelector('meta[property="og:video"]');
+				if (video) {
+					createMedia(video, "video");
+				} else {
+					var img = document.querySelector('meta[property="og:image"]');
+					if (img) {
+						createMedia(img, "img");
+					} else {
+						document.body.innerHTML = body;
+						alert("Error extracting Instagram video.");
+					};
+				}
+				clearTimeout(mediaWaitTimer);
+			}, 200);
+
+		});
+
+	} else {
+		document.querySelector("#media").setAttribute("placeholder", "Invalid Address, Please Enter Proper Insagram Link");
+
+	}
 }

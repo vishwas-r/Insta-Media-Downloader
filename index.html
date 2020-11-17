@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lobster" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>::-webkit-input-placeholder{text-align:center}:-moz-placeholder{text-align:center}::-moz-placeholder{text-align:center}:-ms-input-placeholder{text-align:center}body{font-size:16px}#postUrl{width:100%;height:40px}.header{text-align:center;font-family:Lobster;font-size:50px;color:#d9534f}#downloadVideo{font-size:24px;margin-top:2%}.content{padding-top:5%}.footer{background-color:#000;padding:1.5rem 0;word-spacing:10px;color:#d9534f;left:0;right:0;bottom:0;position:fixed}.fa{color:#d9534f}input{text-align:center}</style>
+<style>::-webkit-input-placeholder{text-align:center}:-moz-placeholder{text-align:center}::-moz-placeholder{text-align:center}:-ms-input-placeholder{text-align:center}body{font-size:16px}.header{text-align:center;font-family:Lobster;font-size:50px;color:#d9534f}#downloadVideo{font-size:24px;margin-top:2%}.content{padding-top:5%}.footer{background-color:#000;padding:1.5rem 0;word-spacing:10px;color:#d9534f;left:0;right:0;bottom:0;position:fixed}.fa{color:#d9534f}input{text-align:center}</style>
 </head>
 <body>
 <div class="container">
@@ -17,11 +17,16 @@
 	<div class="row content">
 		<div class="col-sm-12">
 			<p class="text-center">Enter Instagram Video link & click on 'Download Instagram Video' button</p>
-			<input type="text" id="postUrl" placeholder="Instagram Post URL"/>
-			<input type="button" class="btn btn-danger center-block" id="downloadVideo" value="Download Video">
+			
+			<div class="input-group">
+			   <input type="text" id="postUrl" class="form-control" placeholder="Instagram Post URL" value="https://www.instagram.com/p/B_uHiUpDxVh/"/>
+			   <span class="input-group-btn">
+					<button class="btn btn-danger" type="button" id="getMedia">Get Video!</button>
+			   </span>
+			</div>
 		</div>
 		<div class="col-sm-12">
-			<div id="message" class="text-center"></div>
+			<div id="media" class="text-center"></div>
 		</div>
 	</div>
 	<hr style="margin: 10rem 0 4rem 0"/>
@@ -38,7 +43,7 @@
 					<li>On Instagram App: Tap on more options ( <i class="fa fa-ellipsis-v" aria-hidden="true"></i> ), and tap on "Copy Share URL" or "Copy link". This will copy the link of video to the clipboard.</li>
 					<li>On Web browser: Open the Instagram post containing video in new tab, and copy the URL from URL bar of the browser. </li>
 				</ul>
-				<li>Now, paste the video link in above input box, and click/tap on 'Download Video' button</li>
+				<li>Now, paste the video link in above input box, and click/tap on 'Get Video' button</li>
 				<li>Instagram video will be saved to your device.</li>
 			</ul>
 		</div>
@@ -55,7 +60,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-7 text-right">
-				&copy; 2019
+				&copy; 2020
 			</div>
 			<div class="col-xs-5 text-right">
 				<a href="https://github.com/vishwas-r/Insta-Video-Downloader" target="_blank"><i class="fa fa-github"></i></a>
