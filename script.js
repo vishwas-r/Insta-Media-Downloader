@@ -13,7 +13,7 @@ function createMedia(data, type) {
 	render.innerHTML = "";
 	var downloadMsg = document.createElement("p");
 	downloadMsg.setAttribute("class", "bg-success text-info");
-	downloadMsg.innerText = "Right Click on the Media below to Save Option!";
+	downloadMsg.innerText = "Right Click on the Media below to get Save Option!";
 
 	render.appendChild(downloadMsg);
 	render.appendChild(media);
@@ -34,7 +34,7 @@ function getMedia() {
 						createMedia(img, "img");
 					} else {
 						document.body.innerHTML = body;
-						alert("Error extracting Instagram video.");
+						alert("Error extracting Instagram image / video.");
 					};
 				}
 				clearTimeout(mediaWaitTimer);
