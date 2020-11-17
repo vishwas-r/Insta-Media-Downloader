@@ -10,7 +10,7 @@ Instagram Video Downloader or Insta-Video Downloader is developed as Instagram d
   - Copy the Instagram video URL
     - On Instagram App: Tap on more options, and tap on "Copy Share URL" or "Copy link". This will copy the link of video to the clipboard.
     - On Web browser: Open the Instagram post containing video in new tab, and copy the URL from URL bar of the browser. 
-  - Now, paste the video link in above input box, and click/tap on 'Download Video' button
+  - Now, paste the video link in above input box, and click/tap on 'Get Video' button
   - Instagram video will be saved to your device.</li>
   
 * * *
